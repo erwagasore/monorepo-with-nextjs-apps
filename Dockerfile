@@ -11,7 +11,6 @@ RUN pnpm turbo prune --scope=web-submodule --docker
 FROM base AS deps
 WORKDIR /app
 
-
 COPY .gitignore .gitignore
 COPY --from=pruner /app/out/json/ .
 COPY --from=pruner /app/out/pnpm-lock.yaml ./pnpm-lock.yaml

@@ -1,6 +1,0 @@
-[submodule "apps/web-submodule"]
-	path = apps/web-submodule
-	url = git@er.github.com:erwagasore/web-submodule.git
-[submodule "apps/docs-submodule"]
-	path = apps/docs-submodule
-	url = git@er.github.com:erwagasore/docs-submodule.git
