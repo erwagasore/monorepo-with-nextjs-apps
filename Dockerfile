@@ -6,7 +6,7 @@ RUN npm i -g pnpm
 FROM base AS pruner
 WORKDIR /app
 COPY . .
-RUN pnpm turbo prune --scope=web-submodule --docker
+RUN pnpm turbo prune --scope=web --docker
 
 FROM base AS deps
 WORKDIR /app
