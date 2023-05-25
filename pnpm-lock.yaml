@@ -20,7 +20,7 @@ importers:
         specifier: ^1.9.7
         version: 1.9.7
 
-  apps/docs-submodule:
+  apps/docs:
     dependencies:
       next:
         specifier: ^13.4.1
@@ -54,7 +54,7 @@ importers:
         specifier: ^4.5.3
         version: 4.9.5
 
-  apps/web-submodule:
+  apps/web:
     dependencies:
       next:
         specifier: ^13.4.1
