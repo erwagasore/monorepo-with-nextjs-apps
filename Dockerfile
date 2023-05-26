@@ -30,6 +30,6 @@ RUN adduser --system --uid 1001 ngnix
 RUN rm -rf ./*
 # Copy static assets over
 COPY --from=installer --chown=static:ngnix /app/apps/web/out ./
-
+USER ngnix
 # Containers run nginx with global directives and daemon off
 ENTRYPOINT ["nginx", "-g", "daemon off;"]
