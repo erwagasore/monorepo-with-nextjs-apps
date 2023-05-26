@@ -24,12 +24,12 @@ RUN pnpm build --filter=web
 # nginx state for serving content
 FROM nginx:alpine as RUNNER
 WORKDIR /usr/share/nginx/html
-RUN addgroup --system --gid 1001 static
+RUN addgroup --system --gid 1001 app
 RUN adduser --system --uid 1001 ngnix
 
 RUN rm -rf ./*
 # Copy static assets over
-COPY --from=installer --chown=static:ngnix /app/apps/web/out ./
+COPY --from=installer --chown=ngnix:app /app/apps/web/out ./
 USER ngnix
 # Containers run nginx with global directives and daemon off
 ENTRYPOINT ["nginx", "-g", "daemon off;"]
